@@ -1,6 +1,6 @@
 Statistical Image Completion
 
-Image processing project realized for the Image Processing class SI241 at Telcom ParisTech. Based on patches statistics of an image, the program aims at completing a missing part of the image
+Image processing project realized for the Image Processing class SI241 at Telecom ParisTech. Based on patches statistics of an image, the program aims at completing a missing part of it.
 
 
 
