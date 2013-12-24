@@ -45,7 +45,8 @@ int patchDistance(cimg_library::CImg<unsigned char> currentPatch,cimg_library::C
     {
         for(int j = 0; j< height; j++)
         {
-            distance = distance + ((int)(*(currentPatch.data(i,j)))-(int)(*(patchPlusOffset.data(i,j))))*((int)(*currentPatch.data(i,j))-(int)(*(patchPlusOffset.data(i,j))));
+
+            distance = distance + ((int)(currentPatch.atXY(i,j,0))-(int)(patchPlusOffset.atXY(i,j,0)))*((int)(currentPatch.atXY(i,j,0))-(int)(patchPlusOffset.atXY(i,j,0))) + ((int)(currentPatch.atXY(i,j,1))-(int)(patchPlusOffset.atXY(i,j,1)))*((int)(currentPatch.atXY(i,j,1))-(int)(patchPlusOffset.atXY(i,j,1))) + ((int)(currentPatch.atXY(i,j,2))-(int)(patchPlusOffset.atXY(i,j,2)))*((int)(currentPatch.atXY(i,j,2))-(int)(patchPlusOffset.atXY(i,j,2)));
         }
     }
 

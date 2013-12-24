@@ -57,7 +57,11 @@ if (tab[0]==-1){return 0;}
 
     cout << "Please enter Beta value: ";
     cin >> beta;
-    cimg_library::CImg<unsigned char> newImage = graphcut(image,tabVect,xmin,xmax,ymin,ymax,w,beta,nb);
+
+    int width = image.width();
+    int height = image.height();
+    cimg_library::CImg<unsigned char> newImage(width,height,1,3);
+    newImage = graphcut(image,tabVect,xmin,xmax,ymin,ymax,w,beta,nb);
     displayImage(newImage);
     }
 

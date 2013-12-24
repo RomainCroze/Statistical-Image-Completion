@@ -12,7 +12,7 @@ cimg_library::CImg<unsigned char> switchImage(cimg_library::CImg<unsigned char> 
     int u;
     int v;
 
-    cimg_library::CImg<unsigned char> output(width,height);
+    cimg_library::CImg<unsigned char> output(width,height,1,3);
 
     for (int i=0; i<width; i++)
     {
@@ -20,7 +20,9 @@ cimg_library::CImg<unsigned char> switchImage(cimg_library::CImg<unsigned char> 
         {
             if(i<xmin || i>xmax || j<ymin || j>ymax)
             {
-                *(output.data(i,j))= *(image.data(i,j));
+                output.atXY(i,j,0)=image.atXY(i,j,0);
+                output.atXY(i,j,1)=image.atXY(i,j,1);
+                output.atXY(i,j,2)=image.atXY(i,j,2);
             }
             else
             {
@@ -28,7 +30,9 @@ cimg_library::CImg<unsigned char> switchImage(cimg_library::CImg<unsigned char> 
                 counter = (i-xmin)+(j-ymin)*widthZone;
                 u=newVect[result[counter]][0];
                 v=newVect[result[counter]][1];
-                *(output.data(i,j))=*(image.data(i+u,j+v));
+                output.atXY(i,j,0)=image.atXY(i+u,j+v,0);
+                output.atXY(i,j,1)=image.atXY(i+u,j+v,1);
+                output.atXY(i,j,2)=image.atXY(i+u,j+v,2);
 
             }
 

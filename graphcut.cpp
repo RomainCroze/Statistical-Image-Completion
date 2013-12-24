@@ -60,7 +60,7 @@ cimg_library::CImg<unsigned char> graphcut(cimg_library::CImg<unsigned char> ima
                 y=yPix+ymin;
 
 
-                gc->setDataCost(i,j,(abs(*(image.data(x,y))-*(image.data(x+newTab[j][0],y+newTab[j][1])))*min(heightZone,widthZone))/(1+(min(min(min(xPix,yPix),heightZone-1-yPix),widthZone-1-xPix))));
+                gc->setDataCost(i,j,((abs((image.atXY(x,y,0))-(image.atXY(x+newTab[j][0],y+newTab[j][1],0))) + abs((image.atXY(x,y,1))-(image.atXY(x+newTab[j][0],y+newTab[j][1],1))) + abs((image.atXY(x,y,2))-(image.atXY(x+newTab[j][0],y+newTab[j][1],2))))*min(heightZone,widthZone))/(1+(min(min(min(xPix,yPix),heightZone-1-yPix),widthZone-1-xPix))));
 
             }
 
