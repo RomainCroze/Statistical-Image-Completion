@@ -6,7 +6,7 @@ Image processing project realized for the Image Processing class SI241 at Teleco
 ### How to use:
 -----
 
-Compile the program with a compiler of your choice (tested with GCC). The executable only takes one argument: the image path. Then you have to enter several parameters (you can try poppyField.jpg with 5,32,0.5,60 and 5 for example).
+Compile the program with a compiler of your choice (tested with GCC). The executable only takes one argument: the image path. Then you have to enter several parameters (size of each patch, minimum offset value, random search parameter, number of offsets, graphcut parameter).
 
 ### Sources:
 -----
