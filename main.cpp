@@ -22,18 +22,30 @@ int main(int argc,char *argv[])
     int w;
     cout << "Please enter size of Patch (must be odd and positive): ";
     cin >> w;
+    bool odd = (w-(w/2)*2!=0);
+    assert(odd);
+    bool positive = (w>=0);
+    assert(positive);
     // Minimum offset size
     int tau;
     cout << "Please enter minimum offset value (must be positive): ";
     cin >>tau;
+    positive = (tau>=0);
+    assert(positive);
     // Random search parameter
     float alpha;
     cout << "Please enter alpha (random search parameter) value (must be between 0 and 1): ";
     cin >> alpha;
+    positive = (alpha>=0);
+    assert(positive);
+    bool inferior_one = (alpha<1);
+    assert(inferior_one);
     // Number of vectors to keep
     int nb;
     cout << "Please enter the number of offsets to keep: ";
     cin >> nb;
+    positive = (nb>=0);
+    assert(positive);
 
     // Loading offset field
 
