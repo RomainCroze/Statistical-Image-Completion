@@ -1,15 +1,15 @@
-# Statistical Image Completion
-=====
+### Statistical Image Completion
+-----
 
 Image processing project realized for the Image Processing class SI241 at Telecom ParisTech. Based on patches statistics of an image, the program aims at completing a missing part of it. It can be used to delete small objects in an image.
 
-# How to use:
-=====
+### How to use:
+-----
 
 Compile the program with a compiler of your choice (tested with GCC). The executable only takes one argument: the image path. Then you have to enter several parameters (you can try poppyField.jpg with 5,32,0.5,60 and 5 for example).
 
-# Sources:
-=====
+### Sources:
+-----
 
 [1] Statistical Image Completion, by Kaiming He and Jian Sun, in MSR-TR-2013-51
 
